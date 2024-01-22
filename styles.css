@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+    user-select: none;
+}
+body {
+    padding: 0;
+    margin: 0;
+    font-family:Roboto Slab;
+    background-color:azure ;
+    
+}
+#drum-machine {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#display {
+    background-color: antiquewhite;
+    width: 550px;
+    max-width: 550px;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 5px;
+    border: 2px solid black;
+    box-shadow: 0 0 5px black;
+}
+.btn-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
+    padding: 2em;
+}
+.btn-container > button {
+    border-radius: 5px;
+    border: 1px solid black;
+    box-shadow: 0 0 3px black;
+    font-weight: bold;
+    outline: none;
+    font-size: 1.5rem;
+}
+.btn-container > button:hover {
+    cursor: pointer;
+}
+.drum-pad {
+    width: 4rem;
+    height: 4rem;
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    text-align: center;
+    justify-content: space-around;
+}
+#current-pista {
+    background-color: beige;
+    padding: 1em;
+    border-radius: 5px;
+    width: 150px;
+    font-weight: bold;
+    border: 1px solid black;
+    box-shadow: 0 0 3px black;
+}
+h1 {
+    margin: 0;
+    text-align: left;
+}
+
+
+
+/*********** Baseline, reset styles, Copied from https://range-input-css.netlify.app/ ***********/
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+  }
+  
+  /* Removes default focus */
+  input[type="range"]:focus {
+    outline: none;
+  }
+  
+  /******** Chrome, Safari, Opera and Edge Chromium styles ********/
+  /* slider track */
+  input[type="range"]::-webkit-slider-runnable-track {
+    background-color: #e0e0e0;
+    border-radius: 0.5rem;
+    height: 0.5rem;
+  }
+  
+  /* slider thumb */
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    margin-top: -4px; /* Centers thumb on the track */
+    background-color: #000000;
+    border-radius: 1rem;
+    height: 1rem;
+    width: 1rem;
+  }
+  
+  input[type="range"]:focus::-webkit-slider-thumb {
+    outline: 3px solid #000000;
+    outline-offset: 0.125rem;
+  }
+  
+  /*********** Firefox styles ***********/
+  /* slider track */
+  input[type="range"]::-moz-range-track {
+    background-color: #e0e0e0;
+    border-radius: 0.5rem;
+    height: 0.5rem;
+  }
+  
+  /* slider thumb */
+  input[type="range"]::-moz-range-thumb {
+    background-color: #000000;
+    border: none; /*Removes extra border that FF applies*/
+    border-radius: 1rem;
+    height: 1rem;
+    width: 1rem;
+  }
+  
+  input[type="range"]:focus::-moz-range-thumb{
+    outline: 3px solid #000000;
+    outline-offset: 0.125rem;
+  }
+
+  @media (max-width:550px){
+        #display{
+            height: 100vh;
+            width: 100vw;
+            align-items: center;
+            flex-direction: column-reverse;
+            justify-content: center;
+        }
+        .btn-container{
+            flex-direction: row;
+            gap: 1em;
+            padding: 1em;
+            width: 100%;
+        }
+        .info {
+            justify-content: center;
+            align-items: center;
+        }
+  }
